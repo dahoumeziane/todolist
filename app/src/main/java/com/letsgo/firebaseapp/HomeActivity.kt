@@ -29,7 +29,7 @@ import com.squareup.picasso.Picasso
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
-
+// this is the branch priority
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
