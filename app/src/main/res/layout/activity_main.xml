@@ -69,6 +69,21 @@
         >
 
     </androidx.appcompat.widget.AppCompatButton>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_facebook"
+        android:layout_marginHorizontal="20dp"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#0088FF"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_fb"
+        android:background="@drawable/_stroke_orange"
+        android:text="Se connecter avec facebook"
+        >
+
+    </androidx.appcompat.widget.AppCompatButton>
     <TextView
         android:id="@+id/go_register"
         android:layout_width="wrap_content"
