@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Firebaseapp</string>
+    <string name="creer_compte">Vous n\'avez pas un compte ? <u>S\'inscrivez vous ici</u></string>
+    <string name="se_connecter">Vous avez deja un compte ? <u>Se connecter ici</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
