@@ -46,6 +46,7 @@ class HomeFragment : Fragment() {
             val task_category = dialog.findViewById<TextView>(R.id.task_input_category)
             val task_description = dialog.findViewById<EditText>(R.id.task_input_description)
             val task_add = dialog.findViewById<Button>(R.id.add_task)
+            val task_priority = dialog.findViewById<TextView>(R.id.task_input_priority)
 
             task_add.setOnClickListener {
                 val taskId = Utils.taskRef.child(Utils.auth.currentUser!!.uid).push().key
@@ -67,6 +68,17 @@ class HomeFragment : Fragment() {
                     dialogInterface.dismiss()
 
                 })
+                alertDialog.show()
+            }
+            val priorities= arrayOf("Must do","Should do","Optional")
+            task_priority.setOnClickListener {
+                val alertDialog = AlertDialog.Builder(requireContext())
+                alertDialog.setTitle("Select your task priority")
+                alertDialog.setSingleChoiceItems(priorities,-1,
+                    DialogInterface.OnClickListener { dialogInterface, i ->
+                        task_priority.text = priorities[i]
+                        dialogInterface.dismiss()
+                    })
                 alertDialog.show()
             }
             dialog.show()
