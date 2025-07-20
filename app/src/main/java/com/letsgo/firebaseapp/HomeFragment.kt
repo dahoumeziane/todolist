@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
                 val taskId = Utils.taskRef.child(Utils.auth.currentUser!!.uid).push().key
                 val task = Task(
                     task_name.text.toString(), task_description.text.toString(),
-                    task_category.text.toString(), false, taskId!!
+                    task_category.text.toString(), false, taskId!!,task_priority.text.toString()
                 )
                 addTaskToDb(task)
                 dialog.dismiss()

@@ -5,7 +5,8 @@ data class Task(
     val description : String = "",
     val category : String = "",
     val done : Boolean = false,
-    val id : String = ""
+    val id : String = "",
+    val priority: String?=null
 ){
 
 }

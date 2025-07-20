@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
@@ -91,6 +92,22 @@ class TaskAdapter(
 
                 })
             alertDialog.show()
+        }
+
+        // priority
+        if (tasks[position].priority!=null){
+            holder.taskPriority.text = tasks[position].priority
+            if (tasks[position].priority=="Must do"){
+                holder.taskPriority.setBackgroundResource(R.drawable.must_do_background)
+            }else if (tasks[position].priority=="Should do"){
+                holder.taskPriority.setBackgroundResource(R.drawable.should_do_background)
+
+            }else{
+                holder.taskPriority.setBackgroundResource(R.drawable.optional_background)
+
+            }
+        }else{
+            holder.taskPriority.visibility = View.GONE
         }
     }
 }
